@@ -1,5 +1,7 @@
-import { closePopupByOverlay } from './functions/closePopupByOverlay.js'
-import { handleEscClose } from './functions/handleEscClose.js'
+// PASO 1: Verificar que se exporten correctamente todas las funciones
+// PASO 2: Importar la funcion closePopupByOverlay
+// PASO 3: Importar la funcion handleEscClose
+
 
 export function openPopup(popup) {
   popup.classList.add("popup_opened");
