@@ -32,14 +32,26 @@ The main goals are:
 webinars-repo/
 │
 ├── sprint-7/
-│ ├── demo/ # Base code provided to students during the webinar
-│ ├── complete/ # Final solution code after completing the webinar
-│ └── README.md # Session details and notes
+│   ├── class/
+│   │   ├── demo/         # Base code provided to students during the webinar
+│   │   ├── complete/     # Final solution code after completing the webinar
+│   │   └── README.md     # Session details and notes
+│   │
+│   ├── project/
+│   │   ├── demo/         # Base project code provided to students
+│   │   ├── complete/     # Final project code after completing the webinar
+│   │   └── README.md     # Project description and notes
 │
 ├── sprint-8/
-│ ├── demo/
-│ ├── complete/
-│ └── README.md
+│   ├── class/
+│   │   ├── demo/
+│   │   ├── complete/
+│   │   └── README.md
+│   │
+│   ├── project/
+│   │   ├── demo/
+│   │   ├── complete/
+│   │   └── README.md
 │
 └── docs/
 ├── guidelines.md # General coding standards and practices
