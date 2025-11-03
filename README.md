@@ -30,32 +30,36 @@ The main goals are:
 ## Repository Structure
 ```
 webinars-repo/
-│
-├── sprint-7/
-│   ├── class/
-│   │   ├── demo/         # Base code provided to students during the webinar
-│   │   ├── complete/     # Final solution code after completing the webinar
-│   │   └── README.md     # Session details and notes
-│   │
-│   ├── project/
-│   │   ├── demo/         # Base project code provided to students
-│   │   ├── complete/     # Final project code after completing the webinar
-│   │   └── README.md     # Project description and notes
-│
-├── sprint-8/
-│   ├── class/
-│   │   ├── demo/
-│   │   ├── complete/
-│   │   └── README.md
-│   │
-│   ├── project/
-│   │   ├── demo/
-│   │   ├── complete/
-│   │   └── README.md
-│
-└── docs/
-├── guidelines.md # General coding standards and practices
-└── changelog.md # Summary of updates applied across webinars
+├── version-01/ # First version of the webinar repository
+│ │ # Contains all sprints for this version
+│ │ # Future versions will include folders like:
+│ │ # version-2/, version-3/, etc.
+│ │
+│ ├── sprint-07/
+│ │ ├── class/
+│ │ │ ├── demo/ # Base code provided to students during the webinar
+│ │ │ ├── complete/ # Final solution code after completing the webinar
+│ │ │ └── README.md # Session details and notes
+│ │ │
+│ │ ├── project/
+│ │ │ ├── demo/ # Base project code provided to students
+│ │ │ ├── complete/ # Final project code after completing the webinar
+│ │ │ └── README.md # Project description and notes
+│ │
+│ ├── sprint-08/
+│ │ ├── class/
+│ │ │ ├── demo/
+│ │ │ ├── complete/
+│ │ │ └── README.md
+│ │ │
+│ │ ├── project/
+│ │ │ ├── demo/
+│ │ │ ├── complete/
+│ │ │ └── README.md
+│ │
+│ └── docs/
+│ ├── guidelines.md # General coding standards and practices
+│ └── changelog.md # Summary of updates applied across webinars
 ```
 
 Each sprint folder should contain two versions of the code:

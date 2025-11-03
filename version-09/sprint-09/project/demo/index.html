@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Biblioteca Personal - Webinar Sprint 7 [VERSIÓN COMPLETA]</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page">
+<div class="page__content">
+    <header class="header">
+        <h1 class="header__title">📚 Mi Biblioteca Personal</h1>
+    </header>
+
+    <main class="content">
+        <section class="profile">
+            <div class="profile__avatar">👤</div>
+            <div class="profile__info">
+                <div class="profile__text">
+                    <h2 class="profile__name">Ana Lectora</h2>
+                    <p class="profile__goal">Meta: Leer 12 libros este año</p>
+                </div>
+                <button
+                        type="button"
+                        class="profile__edit-button"
+                        aria-label="Editar perfil"
+                >
+                    Editar Perfil
+                </button>
+            </div>
+        </section>
+
+        <section class="books">
+            <div class="books__header">
+                <h3 class="books__title">Mis Libros</h3>
+                <button
+                        type="button"
+                        class="profile__add-button"
+                        aria-label="Agregar libro"
+                >
+                    + Agregar Libro
+                </button>
+            </div>
+            <ul class="books__list">
+                <li class="book">
+                    <div class="book__cover">📖</div>
+                    <div class="book__info">
+                        <h4 class="book__title">Cien años de soledad</h4>
+                        <p class="book__author">Gabriel García Márquez</p>
+                    </div>
+                </li>
+                <li class="book">
+                    <div class="book__cover">📖</div>
+                    <div class="book__info">
+                        <h4 class="book__title">El Principito</h4>
+                        <p class="book__author">Antoine de Saint-Exupéry</p>
+                    </div>
+                </li>
+                <li class="book">
+                    <div class="book__cover">📖</div>
+                    <div class="book__info">
+                        <h4 class="book__title">Don Quijote</h4>
+                        <p class="book__author">Miguel de Cervantes</p>
+                    </div>
+                </li>
+                <li class="book">
+                    <div class="book__cover">📖</div>
+                    <div class="book__info">
+                        <h4 class="book__title">La Casa de los Espíritus</h4>
+                        <p class="book__author">Isabel Allende</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+</div>
+
+<!-- Popup Editar Perfil -->
+<div class="popup" id="edit-popup">
+    <div class="popup__content">
+        <button type="button" class="popup__close" aria-label="Cerrar">
+            ×
+        </button>
+        <h3 class="popup__title">Editar Perfil de Lectura</h3>
+        <form class="popup__form" name="edit-profile" novalidate>
+            <input
+                    type="text"
+                    name="reader-name"
+                    class="popup__input"
+                    placeholder="Tu nombre"
+                    required
+                    minlength="2"
+                    maxlength="30"
+                    value="Ana Lectora"
+            />
+            <span class="popup__error reader-name-error"></span>
+            <input
+                    type="text"
+                    name="reading-goal"
+                    class="popup__input"
+                    placeholder="Ej: Leer 12 libros este año"
+                    required
+                    minlength="5"
+                    maxlength="100"
+                    value="Leer 12 libros este año"
+            />
+            <span class="popup__error reading-goal-error"></span>
+            <button type="submit" class="popup__button">Actualizar Perfil</button>
+        </form>
+    </div>
+</div>
+
+<!-- Popup Agregar Libro -->
+<div class="popup" id="add-popup">
+    <div class="popup__content">
+        <button type="button" class="popup__close" aria-label="Cerrar">
+            ×
+        </button>
+        <h3 class="popup__title">Agregar Nuevo Libro</h3>
+        <form class="popup__form" name="add-book" novalidate>
+            <input
+                    type="text"
+                    name="book-title"
+                    class="popup__input"
+                    placeholder="Título del libro"
+                    required
+                    minlength="2"
+                    maxlength="50"
+            />
+            <span class="popup__error book-title-error"></span>
+            <input
+                    type="text"
+                    name="book-author"
+                    class="popup__input"
+                    placeholder="Autor del libro"
+                    required
+                    minlength="2"
+                    maxlength="40"
+            />
+            <span class="popup__error book-author-error"></span>
+            <button type="submit" class="popup__button">
+                Agregar a Mi Biblioteca
+            </button>
+        </form>
+    </div>
+</div>
+<script src="./scripts/functions/closePopupByOverlay.js"></script>
+<script src="./scripts/functions/handleEscClose.js"></script>
+<script src="./scripts/functions/hasInvalidInput.js"></script>
+<script src="./scripts/functions/hideInputError.js"></script>
+<script src="./scripts/functions/setEventListeners.js"></script>
+<script src="./scripts/functions/showInputError.js"></script>
+<script src="./scripts/functions/toggleButtonState.js"></script>
+
+<!-- Funciones de popup completadas -->
+<script src="./scripts/popup.js"></script>
+
+<!-- Inicialización principal -->
+<script src="./scripts/index.js"></script>
+</body>
+</html>
