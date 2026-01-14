@@ -1,0 +1,92 @@
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 50%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.card__image-container {
+  position: relative;
+  width: 100%;
+}
+
+.card__image {
+  width: 100%;
+  padding-bottom: 66.66%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card__image_type_iceland {
+  background-image: url("../images/aurora.jpg");
+}
+.card__image_type_new-zealand {
+  background-image: url("../images/hobbit.jpg");
+}
+.card__image_type_paris {
+  background-image: url("../images/paris.jpg");
+}
+
+.card__badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.card__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 20px;
+}
+
+.card__title {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+
+.card__description {
+  margin: 0;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.card__link {
+  text-decoration: none;
+  color: #4300d2;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+  .card__image {
+    padding-bottom: 75%;
+  }
+}
