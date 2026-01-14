@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Media queries</title>
+    <title>Manejo de proporciones y diseño adaptativo</title>
     <link rel="stylesheet" href="./styles/base.css" />
 
     <!-- SOLO MODIFICAR EL ARCHIVO STYLE.CSS -->
@@ -11,24 +11,26 @@
   </head>
   <body>
     <main>
-      <div class="card">
-        <img
-          class="card__image"
-          src="./img/gameboy.jpg"
-          alt="Consola Game Boy"
-        />
-        <div class="card__content">
-          <span class="card__category">Consola retro</span>
-          <h1 class="card__title">Game Boy</h1>
-          <p class="card__description">
-            La Game Boy original, lanzada por Nintendo en abril de 1989,
-            revolucionó la industria de los videojuegos al ofrecer
-            entretenimiento portátil de calidad.
-          </p>
-          <h2 class="card__price">$99</h2>
-          <button class="card__button">Agregar al carrito</button>
+      <h1 class="title">Destinos Populares</h1>
+      <section class="cards">
+        <div class="card">
+          <img
+            class="card__image"
+            src="./images/aurora1.jpg"
+            alt="Paisaje de Islandia"
+          />
+          <div class="card__content">
+            <div class="card__info">
+              <h2 class="card__title">🇮🇸 Islandia</h2>
+              <p class="card__description">
+                Descubre un paisaje mágico donde el cielo se ilumina con las
+                auroras boreales. Una experiencia natural inolvidable.
+              </p>
+            </div>
+            <a href="#" class="card__link">Leer más →</a>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>
