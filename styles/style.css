@@ -23,7 +23,14 @@
 
 .card__image {
   width: 100%;
-  object-fit: cover;
+  padding-bottom: 66.66%;
+  /* aspect-ratio: 3 / 2; */
+  background-size: cover;
+  background-position: center;
+}
+
+.card__image_type_iceland {
+  background-image: url("../images/aurora2.jpg");
 }
 
 .card__content {
@@ -52,4 +59,14 @@
   color: #4300d2;
   font-weight: bold;
   align-self: flex-start;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+  .card__image {
+    padding-bottom: 75%;
+    /* aspect-ratio: 4 / 3; */
+  }
 }
