@@ -29,19 +29,8 @@
 
 .card__image {
   width: 100%;
-  padding-bottom: 66.66%;
-  background-size: cover;
-  background-position: center;
-}
-
-.card__image_type_iceland {
-  background-image: url("../images/aurora.jpg");
-}
-.card__image_type_new-zealand {
-  background-image: url("../images/hobbit.jpg");
-}
-.card__image_type_paris {
-  background-image: url("../images/paris.jpg");
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
 }
 
 .card__badge {
@@ -111,6 +100,6 @@
     width: 100%;
   }
   .card__image {
-    padding-bottom: 75%;
+    aspect-ratio: 4 / 3;
   }
 }
