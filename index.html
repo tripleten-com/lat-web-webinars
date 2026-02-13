@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Coffee</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <h1 class="header__title">JavaScript Coffee</h1>
+    </header>
+    <main class="content">
+      <section class="section">
+        <h2 class="section__title">Combos del día</h2>
+        <div class="combos-list"></div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Menú</h2>
+        <div class="menu-list"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">© 2026 JavaScript Coffee</p>
+    </footer>
+
+    <template id="combo-template">
+      <div class="combo">
+        <div class="combo__info">
+          <h3 class="combo__title"></h3>
+          <p class="combo__price"></p>
+        </div>
+        <ul class="combo__courses"></ul>
+      </div>
+    </template>
+
+    <template id="card-template">
+      <article class="card">
+        <img class="card__image" src="" alt="" />
+        <div class="card__content">
+          <h3 class="card__title"></h3>
+          <p class="card__description"></p>
+          <div class="card__footer">
+            <span class="card__price"></span>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="./utils.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
