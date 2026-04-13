@@ -1,9 +1,10 @@
 // index.js - Archivo principal de la aplicación
-
-// Variables globales
-import { closePopup, openPopup, setupAllPopups } from "./popup.js";
+import { UserInfo } from "./components/UserInfo.js";
+import { PopupWithForm } from "./components/PopupWithForm.js";
+import { PopupWithImage } from "./components/PopupWithImage.js";
 import { setEventListeners } from "./functions/setEventListeners.js";
 
+// Variables globales
 const initialBooks = [
   {
     title: "Cien años de soledad",
@@ -29,68 +30,54 @@ const initialBooks = [
 
 const editButton = document.querySelector(".profile__edit-button");
 const addButton = document.querySelector(".profile__add-button");
-const editPopup = document.querySelector("#edit-popup");
-const addPopup = document.querySelector("#add-popup");
-
 const editForm = document.forms["edit-profile"];
-const addForm = document.forms["add-book"];
-
-const imagePopup = document.querySelector("#image-popup");
-const popupImage = imagePopup.querySelector(".popup__image");
-const popupCaption = imagePopup.querySelector(".popup__caption");
 
 // Elementos del perfil
 const readerNameInput = editForm.querySelector('input[name="reader-name"]');
 const readingGoalInput = editForm.querySelector('input[name="reading-goal"]');
-const profileName = document.querySelector(".profile__name");
-const profileGoal = document.querySelector(".profile__goal");
 
 // Lista de libros
 const booksList = document.querySelector(".books__list");
 
-// Event listeners para abrir popups (ya implementados)
+const userInfo = new UserInfo({
+  nameSelector: ".profile__name",
+  goalSelector: ".profile__goal",
+});
+
+const editProfilePopup = new PopupWithForm("#edit-popup", (inputValues) => {
+  userInfo.setUserInfo({
+    name: inputValues["reader-name"],
+    goal: inputValues["reading-goal"],
+  });
+  editProfilePopup.close();
+});
+editProfilePopup.setEventListeners();
+
+const addBookPopup = new PopupWithForm("#add-popup", (inputValues) => {
+  const newBook = createBook(
+    inputValues["book-title"],
+    inputValues["book-author"],
+    inputValues["book-link"],
+  );
+  booksList.prepend(newBook);
+  addBookPopup.close();
+});
+addBookPopup.setEventListeners();
+
+const imagePopup = new PopupWithImage("#image-popup");
+imagePopup.setEventListeners();
+
 editButton.addEventListener("click", () => {
+  const userData = userInfo.getUserInfo();
   // Llenar el formulario con los datos actuales
-  readerNameInput.value = profileName.textContent;
+  readerNameInput.value = userData.name;
   // Remover el "Meta: " del inicio para editar solo el contenido
-  readingGoalInput.value = profileGoal.textContent.replace("Meta: ", "");
-  openPopup(editPopup);
+  readingGoalInput.value = userData.goal.replace("Meta: ", "");
+  editProfilePopup.open();
 });
 
 addButton.addEventListener("click", () => {
-  addForm.reset();
-  openPopup(addPopup);
-});
-
-// Event listener para el formulario de editar perfil
-editForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  // Actualizar el perfil con los nuevos datos
-  profileName.textContent = readerNameInput.value;
-  // Agregar "Meta: " al inicio del valor ingresado
-  profileGoal.textContent = "Meta: " + readingGoalInput.value;
-
-  closePopup(editPopup);
-});
-
-// Event listener para el formulario de agregar libro (ya implementado)
-addForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const bookTitleInput = addForm.querySelector('input[name="book-title"]');
-  const bookAuthorInput = addForm.querySelector('input[name="book-author"]');
-  const bookLinkInput = addForm.querySelector('input[name="book-link"]');
-
-  const newBook = createBook(
-    bookTitleInput.value,
-    bookAuthorInput.value,
-    bookLinkInput.value,
-  );
-  booksList.prepend(newBook);
-
-  addForm.reset();
-  closePopup(addPopup);
+  addBookPopup.open();
 });
 
 // Función para crear una nueva tarjeta de libro (ya implementada)
@@ -112,10 +99,7 @@ function createBook(title, author, link) {
   const coverImage = bookElement.querySelector(".book__cover");
 
   coverImage.addEventListener("click", () => {
-    popupImage.src = link;
-    popupImage.alt = title;
-    popupCaption.textContent = title;
-    openPopup(imagePopup);
+    imagePopup.open({ title, link });
   });
 
   return bookElement;
@@ -123,9 +107,6 @@ function createBook(title, author, link) {
 
 // Inicialización cuando se carga la página
 document.addEventListener("DOMContentLoaded", () => {
-  // Configurar todos los popups
-  setupAllPopups();
-
   // Seleccionar todos los formularios de la página
   const formList = Array.from(document.querySelectorAll(".popup__form"));
   // Configurar cada formulario
