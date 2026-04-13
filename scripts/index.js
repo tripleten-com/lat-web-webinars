@@ -1,6 +1,32 @@
 // index.js - Archivo principal de la aplicación
 
-// Variables globales (ya configuradas)
+// Variables globales
+import { closePopup, openPopup, setupAllPopups } from "./popup.js";
+import { setEventListeners } from "./functions/setEventListeners.js";
+
+const initialBooks = [
+  {
+    title: "Cien años de soledad",
+    author: "Gabriel García Márquez",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-lat/marquez.jpg",
+  },
+  {
+    title: "El Principito",
+    author: "Antoine de Saint-Exupéry",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-lat/exupery.jpg",
+  },
+  {
+    title: "Don Quijote",
+    author: "Miguel de Cervantes",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-lat/cervantes.jpg",
+  },
+  {
+    title: "La casa de los espíritus",
+    author: "Isabel Allende",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-lat/allende.jpg",
+  },
+];
+
 const editButton = document.querySelector(".profile__edit-button");
 const addButton = document.querySelector(".profile__add-button");
 const editPopup = document.querySelector("#edit-popup");
@@ -8,6 +34,10 @@ const addPopup = document.querySelector("#add-popup");
 
 const editForm = document.forms["edit-profile"];
 const addForm = document.forms["add-book"];
+
+const imagePopup = document.querySelector("#image-popup");
+const popupImage = imagePopup.querySelector(".popup__image");
+const popupCaption = imagePopup.querySelector(".popup__caption");
 
 // Elementos del perfil
 const readerNameInput = editForm.querySelector('input[name="reader-name"]');
@@ -50,8 +80,13 @@ addForm.addEventListener("submit", (event) => {
 
   const bookTitleInput = addForm.querySelector('input[name="book-title"]');
   const bookAuthorInput = addForm.querySelector('input[name="book-author"]');
+  const bookLinkInput = addForm.querySelector('input[name="book-link"]');
 
-  const newBook = createBook(bookTitleInput.value, bookAuthorInput.value);
+  const newBook = createBook(
+    bookTitleInput.value,
+    bookAuthorInput.value,
+    bookLinkInput.value,
+  );
   booksList.prepend(newBook);
 
   addForm.reset();
@@ -59,10 +94,10 @@ addForm.addEventListener("submit", (event) => {
 });
 
 // Función para crear una nueva tarjeta de libro (ya implementada)
-function createBook(title, author) {
+function createBook(title, author, link) {
   const bookTemplate = `
     <li class="book">
-      <div class="book__cover">📖</div>
+      <img class="book__cover" src="${link}" alt="${title}" />
       <div class="book__info">
         <h4 class="book__title">${title}</h4>
         <p class="book__author">${author}</p>
@@ -74,6 +109,14 @@ function createBook(title, author) {
   const tempContainer = document.createElement("div");
   tempContainer.innerHTML = bookTemplate;
   const bookElement = tempContainer.firstElementChild;
+  const coverImage = bookElement.querySelector(".book__cover");
+
+  coverImage.addEventListener("click", () => {
+    popupImage.src = link;
+    popupImage.alt = title;
+    popupCaption.textContent = title;
+    openPopup(imagePopup);
+  });
 
   return bookElement;
 }
@@ -87,6 +130,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const formList = Array.from(document.querySelectorAll(".popup__form"));
   // Configurar cada formulario
   formList.forEach((formElement) => {
-    setEventListeners(formElement)
+    setEventListeners(formElement);
+  });
+
+  initialBooks.forEach((book) => {
+    const newBook = createBook(book.title, book.author, book.link);
+    booksList.append(newBook);
   });
 });
