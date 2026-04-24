@@ -3,7 +3,8 @@ import { Section } from "./components/Section.js";
 import { UserInfo } from "./components/UserInfo.js";
 import { PopupWithForm } from "./components/PopupWithForm.js";
 import { FormValidator } from "./components/FormValidator.js";
-import { initialPosts, defaultFormConfig } from "./utils/constants.js";
+import { defaultFormConfig } from "./utils/constants.js";
+import { Api } from "./components/Api.js";
 import type { PostData } from "./types/types.js";
 
 const editButton = document.querySelector(
@@ -30,6 +31,8 @@ const emailInput = editForm.querySelector(
   'input[name="profile-email"]',
 ) as HTMLInputElement;
 
+const api = new Api("https://jsonplaceholder.typicode.com");
+
 const userInfo = new UserInfo({
   nameSelector: ".profile__name",
   usernameSelector: ".profile__username",
@@ -50,23 +53,38 @@ const postSection = new Section<PostData>(
   ".posts__list",
 );
 
-const editProfilePopup = new PopupWithForm("#edit-popup", (inputValues) => {
-  userInfo.setUserInfo({
-    name: inputValues["profile-name"],
-    username: inputValues["profile-username"],
-    email: inputValues["profile-email"],
-  });
-  editProfilePopup.close();
-});
+const editProfilePopup = new PopupWithForm(
+  "#edit-popup",
+  async (inputValues) => {
+    try {
+      const userData = await api.updateUserInfo({
+        name: inputValues["profile-name"],
+        username: inputValues["profile-username"],
+        email: inputValues["profile-email"],
+      });
+
+      userInfo.setUserInfo(userData);
+
+      editProfilePopup.close();
+    } catch (err) {
+      console.error("Error al actualizar perfil:", err);
+    }
+  },
+);
 editProfilePopup.setEventListeners();
 
-const addPostPopup = new PopupWithForm("#add-popup", (inputValues) => {
-  const newPostElement = createPost({
-    title: inputValues["post-title"],
-    body: inputValues["post-body"],
-  });
-  postSection.addItem(newPostElement);
-  addPostPopup.close();
+const addPostPopup = new PopupWithForm("#add-popup", async (inputValues) => {
+  try {
+    const newPostData = await api.addPost({
+      title: inputValues["post-title"],
+      body: inputValues["post-body"],
+    });
+    const newPostElement = createPost(newPostData);
+    postSection.addItem(newPostElement);
+    addPostPopup.close();
+  } catch (err) {
+    console.error("Error al agregar post:", err);
+  }
 });
 addPostPopup.setEventListeners();
 
@@ -92,7 +110,19 @@ const postValidator = new FormValidator(defaultFormConfig, postForm);
 profileValidator.enableValidation();
 postValidator.enableValidation();
 
-// Inicialización cuando se carga la página
-document.addEventListener("DOMContentLoaded", () => {
-  postSection.renderItems(initialPosts);
-});
+// Inicialización
+const initApp = async () => {
+  try {
+    const [userData, posts] = await Promise.all([
+      api.getUserInfo(),
+      api.getInitialPosts(),
+    ]);
+
+    userInfo.setUserInfo(userData);
+    postSection.renderItems(posts.reverse());
+  } catch (err) {
+    console.error("Error al cargar datos iniciales:", err);
+  }
+};
+
+initApp();
