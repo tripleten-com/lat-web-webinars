@@ -12,7 +12,7 @@ export class Post {
     this.templateSelector = templateSelector;
   }
 
-  private _getTemplate(): HTMLElement {
+  private getTemplate(): HTMLElement {
     const postElement = (
       document.querySelector(this.templateSelector) as HTMLTemplateElement
     ).content
@@ -23,7 +23,7 @@ export class Post {
   }
 
   generatePost(): HTMLElement {
-    this.element = this._getTemplate();
+    this.element = this.getTemplate();
 
     const titleElement = this.element.querySelector(
       ".post__title",
