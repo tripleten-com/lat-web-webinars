@@ -1,10 +1,39 @@
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import type { Country } from "../../types/types";
 import "./CountryDetails.css";
+import api from "../../utils/api";
 
-function CountryDetails(): React.JSX.Element {
+export default function CountryDetails(): React.JSX.Element {
+  const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+
+  const [country, setCountry] = useState<Country | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (!id) return;
+
+    const fetchCountry = async () => {
+      try {
+        const countryData = await api.getCountryById(id);
+        setCountry(countryData);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchCountry();
+  }, [id]);
+
+  if (isLoading) return <p className="loading">Cargando datos del país...</p>;
+  if (!country) return <p className="loading">País no encontrado.</p>;
+
   return (
     <div className="country-details">
-      <h2>Detalles del país</h2>
-      {/* <img
+      <img
         src={country.flags.svg}
         alt="Bandera"
         className="country-details__flag"
@@ -18,11 +47,11 @@ function CountryDetails(): React.JSX.Element {
       </p>
       <p>
         <strong>Superficie:</strong> {country.area.toLocaleString("es-ES")} km²
-      </p> */}
+      </p>
 
-      <button className="back-button">Volver a la lista</button>
+      <button onClick={() => navigate(-1)} className="back-button">
+        Volver a la lista
+      </button>
     </div>
   );
 }
-
-export default CountryDetails;

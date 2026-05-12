@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Dashboard.css";
 
 function Dashboard(): React.JSX.Element {
@@ -8,9 +9,9 @@ function Dashboard(): React.JSX.Element {
         Descubre información detallada sobre todos los países del mundo en un
         solo lugar.
       </p>
-      <a href="/countries" className="dashboard__button">
+      <Link to="/countries" className="dashboard__button">
         Explorar Países
-      </a>
+      </Link>
     </div>
   );
 }

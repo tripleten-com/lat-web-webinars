@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./CountryCard.css";
 import type { Country } from "../../../types/types";
 
@@ -18,9 +19,9 @@ function CountryCard({ country }: CountryCardProps): React.JSX.Element {
           {country.translations.spa.common}
         </h3>
 
-        <a href={`/countries/${country.cca3}`} className="country-card__link">
+        <Link to={`/countries/${country.cca3}`} className="country-card__link">
           Ver detalles
-        </a>
+        </Link>
       </div>
     </li>
   );
