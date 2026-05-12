@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
+import LangButton from "../LangButton/LangButton";
 
 function NavBar() {
   const customClassName = ({ isActive }: { isActive: boolean }): string =>
@@ -13,6 +14,7 @@ function NavBar() {
       <NavLink to="/countries" className={customClassName}>
         Países
       </NavLink>
+      <LangButton />
     </nav>
   );
 }

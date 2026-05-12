@@ -35,7 +35,7 @@ export default function CountryDetails(): React.JSX.Element {
     <div className="country-details">
       <img
         src={country.flags.svg}
-        alt="Bandera"
+        alt={`Bandera de ${country.translations.spa.common}`}
         className="country-details__flag"
       />
       <h2>{country.translations.spa.common}</h2>
@@ -43,10 +43,10 @@ export default function CountryDetails(): React.JSX.Element {
         <strong>Capital:</strong> {country.capital ? country.capital[0] : "N/A"}
       </p>
       <p>
-        <strong>Población:</strong> {country.population.toLocaleString("es-ES")}
+        <strong>Población:</strong> {country.population.toLocaleString()}
       </p>
       <p>
-        <strong>Superficie:</strong> {country.area.toLocaleString("es-ES")} km²
+        <strong>Superficie:</strong> {country.area.toLocaleString()} km²
       </p>
 
       <button onClick={() => navigate(-1)} className="back-button">

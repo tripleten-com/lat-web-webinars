@@ -1,0 +1,25 @@
+.lang-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2b2b2b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 20px;
+}
+
+.lang-button:hover {
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.lang-button__icon {
+  font-size: 16px;
+}
