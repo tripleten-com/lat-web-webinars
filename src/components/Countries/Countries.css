@@ -1,0 +1,23 @@
+.countries {
+  padding: 40px 20px;
+}
+
+.countries__title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.countries__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0;
+}
+
+.loading {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 50px;
+  color: #666;
+}
