@@ -1,0 +1,842 @@
+[
+  {
+    "name": {
+      "common": "Antigua and Barbuda",
+      "official": "Antigua and Barbuda"
+    },
+    "cca3": "ATG",
+    "capital": [
+      "Saint John's"
+    ],
+    "region": "Americas",
+    "population": 97929,
+    "area": 442,
+    "translations": {
+      "spa": {
+        "official": "Antigua and Barbuda",
+        "common": "Antigua y Barbuda"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ag.png",
+      "svg": "https://flagcdn.com/ag.svg",
+      "alt": "The flag of Antigua and Barbuda"
+    }
+  },
+  {
+    "name": {
+      "common": "Argentina",
+      "official": "Argentine Republic"
+    },
+    "cca3": "ARG",
+    "capital": [
+      "Buenos Aires"
+    ],
+    "region": "Americas",
+    "population": 45376763,
+    "area": 2780400,
+    "translations": {
+      "spa": {
+        "official": "Argentine Republic",
+        "common": "Argentina"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ar.png",
+      "svg": "https://flagcdn.com/ar.svg",
+      "alt": "The flag of Argentina"
+    }
+  },
+  {
+    "name": {
+      "common": "Bahamas",
+      "official": "Commonwealth of the Bahamas"
+    },
+    "cca3": "BHS",
+    "capital": [
+      "Nassau"
+    ],
+    "region": "Americas",
+    "population": 393244,
+    "area": 13943,
+    "translations": {
+      "spa": {
+        "official": "Commonwealth of the Bahamas",
+        "common": "Bahamas"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bs.png",
+      "svg": "https://flagcdn.com/bs.svg",
+      "alt": "The flag of Bahamas"
+    }
+  },
+  {
+    "name": {
+      "common": "Barbados",
+      "official": "Barbados"
+    },
+    "cca3": "BRB",
+    "capital": [
+      "Bridgetown"
+    ],
+    "region": "Americas",
+    "population": 287371,
+    "area": 430,
+    "translations": {
+      "spa": {
+        "official": "Barbados",
+        "common": "Barbados"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bb.png",
+      "svg": "https://flagcdn.com/bb.svg",
+      "alt": "The flag of Barbados"
+    }
+  },
+  {
+    "name": {
+      "common": "Belize",
+      "official": "Belize"
+    },
+    "cca3": "BLZ",
+    "capital": [
+      "Belmopan"
+    ],
+    "region": "Americas",
+    "population": 397621,
+    "area": 22966,
+    "translations": {
+      "spa": {
+        "official": "Belize",
+        "common": "Belice"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bz.png",
+      "svg": "https://flagcdn.com/bz.svg",
+      "alt": "The flag of Belize"
+    }
+  },
+  {
+    "name": {
+      "common": "Bolivia",
+      "official": "Plurinational State of Bolivia"
+    },
+    "cca3": "BOL",
+    "capital": [
+      "Sucre"
+    ],
+    "region": "Americas",
+    "population": 11673021,
+    "area": 1098581,
+    "translations": {
+      "spa": {
+        "official": "Plurinational State of Bolivia",
+        "common": "Bolivia"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bo.png",
+      "svg": "https://flagcdn.com/bo.svg",
+      "alt": "The flag of Bolivia"
+    }
+  },
+  {
+    "name": {
+      "common": "Brazil",
+      "official": "Federative Republic of Brazil"
+    },
+    "cca3": "BRA",
+    "capital": [
+      "Brasília"
+    ],
+    "region": "Americas",
+    "population": 212559417,
+    "area": 8515767,
+    "translations": {
+      "spa": {
+        "official": "Federative Republic of Brazil",
+        "common": "Brasil"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/br.png",
+      "svg": "https://flagcdn.com/br.svg",
+      "alt": "The flag of Brazil"
+    }
+  },
+  {
+    "name": {
+      "common": "Canada",
+      "official": "Canada"
+    },
+    "cca3": "CAN",
+    "capital": [
+      "Ottawa"
+    ],
+    "region": "Americas",
+    "population": 38005238,
+    "area": 9984670,
+    "translations": {
+      "spa": {
+        "official": "Canada",
+        "common": "Canadá"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ca.png",
+      "svg": "https://flagcdn.com/ca.svg",
+      "alt": "The flag of Canada"
+    }
+  },
+  {
+    "name": {
+      "common": "Chile",
+      "official": "Republic of Chile"
+    },
+    "cca3": "CHL",
+    "capital": [
+      "Santiago"
+    ],
+    "region": "Americas",
+    "population": 19116201,
+    "area": 756102,
+    "translations": {
+      "spa": {
+        "official": "Republic of Chile",
+        "common": "Chile"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/cl.png",
+      "svg": "https://flagcdn.com/cl.svg",
+      "alt": "The flag of Chile"
+    }
+  },
+  {
+    "name": {
+      "common": "Colombia",
+      "official": "Republic of Colombia"
+    },
+    "cca3": "COL",
+    "capital": [
+      "Bogotá"
+    ],
+    "region": "Americas",
+    "population": 50882891,
+    "area": 1141748,
+    "translations": {
+      "spa": {
+        "official": "Republic of Colombia",
+        "common": "Colombia"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/co.png",
+      "svg": "https://flagcdn.com/co.svg",
+      "alt": "The flag of Colombia"
+    }
+  },
+  {
+    "name": {
+      "common": "Costa Rica",
+      "official": "Republic of Costa Rica"
+    },
+    "cca3": "CRI",
+    "capital": [
+      "San José"
+    ],
+    "region": "Americas",
+    "population": 5094114,
+    "area": 51100,
+    "translations": {
+      "spa": {
+        "official": "Republic of Costa Rica",
+        "common": "Costa Rica"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/cr.png",
+      "svg": "https://flagcdn.com/cr.svg",
+      "alt": "The flag of Costa Rica"
+    }
+  },
+  {
+    "name": {
+      "common": "Cuba",
+      "official": "Republic of Cuba"
+    },
+    "cca3": "CUB",
+    "capital": [
+      "La Habana"
+    ],
+    "region": "Americas",
+    "population": 11326616,
+    "area": 109884,
+    "translations": {
+      "spa": {
+        "official": "Republic of Cuba",
+        "common": "Cuba"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/cu.png",
+      "svg": "https://flagcdn.com/cu.svg",
+      "alt": "The flag of Cuba"
+    }
+  },
+  {
+    "name": {
+      "common": "Dominica",
+      "official": "Commonwealth of Dominica"
+    },
+    "cca3": "DMA",
+    "capital": [
+      "Roseau"
+    ],
+    "region": "Americas",
+    "population": 71986,
+    "area": 751,
+    "translations": {
+      "spa": {
+        "official": "Commonwealth of Dominica",
+        "common": "Dominica"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/dm.png",
+      "svg": "https://flagcdn.com/dm.svg",
+      "alt": "The flag of Dominica"
+    }
+  },
+  {
+    "name": {
+      "common": "Ecuador",
+      "official": "Republic of Ecuador"
+    },
+    "cca3": "ECU",
+    "capital": [
+      "Quito"
+    ],
+    "region": "Americas",
+    "population": 17643060,
+    "area": 276841,
+    "translations": {
+      "spa": {
+        "official": "Republic of Ecuador",
+        "common": "Ecuador"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ec.png",
+      "svg": "https://flagcdn.com/ec.svg",
+      "alt": "The flag of Ecuador"
+    }
+  },
+  {
+    "name": {
+      "common": "El Salvador",
+      "official": "Republic of El Salvador"
+    },
+    "cca3": "SLV",
+    "capital": [
+      "San Salvador"
+    ],
+    "region": "Americas",
+    "population": 6486201,
+    "area": 21041,
+    "translations": {
+      "spa": {
+        "official": "Republic of El Salvador",
+        "common": "El Salvador"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/sv.png",
+      "svg": "https://flagcdn.com/sv.svg",
+      "alt": "The flag of El Salvador"
+    }
+  },
+  {
+    "name": {
+      "common": "United States",
+      "official": "United States of America"
+    },
+    "cca3": "USA",
+    "capital": [
+      "Washington, D.C."
+    ],
+    "region": "Americas",
+    "population": 329484123,
+    "area": 9372610,
+    "translations": {
+      "spa": {
+        "official": "United States of America",
+        "common": "Estados Unidos"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/us.png",
+      "svg": "https://flagcdn.com/us.svg",
+      "alt": "The flag of United States"
+    }
+  },
+  {
+    "name": {
+      "common": "Grenada",
+      "official": "Grenada"
+    },
+    "cca3": "GRD",
+    "capital": [
+      "St. George's"
+    ],
+    "region": "Americas",
+    "population": 112519,
+    "area": 344,
+    "translations": {
+      "spa": {
+        "official": "Grenada",
+        "common": "Granada"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/gd.png",
+      "svg": "https://flagcdn.com/gd.svg",
+      "alt": "The flag of Grenada"
+    }
+  },
+  {
+    "name": {
+      "common": "Guatemala",
+      "official": "Republic of Guatemala"
+    },
+    "cca3": "GTM",
+    "capital": [
+      "Ciudad de Guatemala"
+    ],
+    "region": "Americas",
+    "population": 16858333,
+    "area": 108889,
+    "translations": {
+      "spa": {
+        "official": "Republic of Guatemala",
+        "common": "Guatemala"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/gt.png",
+      "svg": "https://flagcdn.com/gt.svg",
+      "alt": "The flag of Guatemala"
+    }
+  },
+  {
+    "name": {
+      "common": "Guyana",
+      "official": "Co-operative Republic of Guyana"
+    },
+    "cca3": "GUY",
+    "capital": [
+      "Georgetown"
+    ],
+    "region": "Americas",
+    "population": 786552,
+    "area": 214969,
+    "translations": {
+      "spa": {
+        "official": "Co-operative Republic of Guyana",
+        "common": "Guyana"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/gy.png",
+      "svg": "https://flagcdn.com/gy.svg",
+      "alt": "The flag of Guyana"
+    }
+  },
+  {
+    "name": {
+      "common": "Haiti",
+      "official": "Republic of Haiti"
+    },
+    "cca3": "HTI",
+    "capital": [
+      "Port-au-Prince"
+    ],
+    "region": "Americas",
+    "population": 11402528,
+    "area": 27750,
+    "translations": {
+      "spa": {
+        "official": "Republic of Haiti",
+        "common": "Haití"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ht.png",
+      "svg": "https://flagcdn.com/ht.svg",
+      "alt": "The flag of Haiti"
+    }
+  },
+  {
+    "name": {
+      "common": "Honduras",
+      "official": "Republic of Honduras"
+    },
+    "cca3": "HND",
+    "capital": [
+      "Tegucigalpa"
+    ],
+    "region": "Americas",
+    "population": 9904608,
+    "area": 112492,
+    "translations": {
+      "spa": {
+        "official": "Republic of Honduras",
+        "common": "Honduras"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/hn.png",
+      "svg": "https://flagcdn.com/hn.svg",
+      "alt": "The flag of Honduras"
+    }
+  },
+  {
+    "name": {
+      "common": "Jamaica",
+      "official": "Jamaica"
+    },
+    "cca3": "JAM",
+    "capital": [
+      "Kingston"
+    ],
+    "region": "Americas",
+    "population": 2961161,
+    "area": 10991,
+    "translations": {
+      "spa": {
+        "official": "Jamaica",
+        "common": "Jamaica"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/jm.png",
+      "svg": "https://flagcdn.com/jm.svg",
+      "alt": "The flag of Jamaica"
+    }
+  },
+  {
+    "name": {
+      "common": "Mexico",
+      "official": "United Mexican States"
+    },
+    "cca3": "MEX",
+    "capital": [
+      "Ciudad de México"
+    ],
+    "region": "Americas",
+    "population": 128932753,
+    "area": 1964375,
+    "translations": {
+      "spa": {
+        "official": "United Mexican States",
+        "common": "México"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/mx.png",
+      "svg": "https://flagcdn.com/mx.svg",
+      "alt": "The flag of Mexico"
+    }
+  },
+  {
+    "name": {
+      "common": "Nicaragua",
+      "official": "Republic of Nicaragua"
+    },
+    "cca3": "NIC",
+    "capital": [
+      "Managua"
+    ],
+    "region": "Americas",
+    "population": 6624554,
+    "area": 130373,
+    "translations": {
+      "spa": {
+        "official": "Republic of Nicaragua",
+        "common": "Nicaragua"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ni.png",
+      "svg": "https://flagcdn.com/ni.svg",
+      "alt": "The flag of Nicaragua"
+    }
+  },
+  {
+    "name": {
+      "common": "Panama",
+      "official": "Republic of Panama"
+    },
+    "cca3": "PAN",
+    "capital": [
+      "Ciudad de Panamá"
+    ],
+    "region": "Americas",
+    "population": 4314768,
+    "area": 75417,
+    "translations": {
+      "spa": {
+        "official": "Republic of Panama",
+        "common": "Panamá"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/pa.png",
+      "svg": "https://flagcdn.com/pa.svg",
+      "alt": "The flag of Panama"
+    }
+  },
+  {
+    "name": {
+      "common": "Paraguay",
+      "official": "Republic of Paraguay"
+    },
+    "cca3": "PRY",
+    "capital": [
+      "Asunción"
+    ],
+    "region": "Americas",
+    "population": 7132538,
+    "area": 406752,
+    "translations": {
+      "spa": {
+        "official": "Republic of Paraguay",
+        "common": "Paraguay"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/py.png",
+      "svg": "https://flagcdn.com/py.svg",
+      "alt": "The flag of Paraguay"
+    }
+  },
+  {
+    "name": {
+      "common": "Peru",
+      "official": "Republic of Peru"
+    },
+    "cca3": "PER",
+    "capital": [
+      "Lima"
+    ],
+    "region": "Americas",
+    "population": 32971846,
+    "area": 1285216,
+    "translations": {
+      "spa": {
+        "official": "Republic of Peru",
+        "common": "Perú"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/pe.png",
+      "svg": "https://flagcdn.com/pe.svg",
+      "alt": "The flag of Peru"
+    }
+  },
+  {
+    "name": {
+      "common": "Dominican Republic",
+      "official": "Dominican Republic"
+    },
+    "cca3": "DOM",
+    "capital": [
+      "Santo Domingo"
+    ],
+    "region": "Americas",
+    "population": 10847910,
+    "area": 48671,
+    "translations": {
+      "spa": {
+        "official": "Dominican Republic",
+        "common": "República Dominicana"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/do.png",
+      "svg": "https://flagcdn.com/do.svg",
+      "alt": "The flag of Dominican Republic"
+    }
+  },
+  {
+    "name": {
+      "common": "Saint Kitts and Nevis",
+      "official": "Federation of Saint Christopher and Nevis"
+    },
+    "cca3": "KNA",
+    "capital": [
+      "Basseterre"
+    ],
+    "region": "Americas",
+    "population": 53192,
+    "area": 261,
+    "translations": {
+      "spa": {
+        "official": "Federation of Saint Christopher and Nevis",
+        "common": "San Cristóbal y Nieves"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/kn.png",
+      "svg": "https://flagcdn.com/kn.svg",
+      "alt": "The flag of Saint Kitts and Nevis"
+    }
+  },
+  {
+    "name": {
+      "common": "Saint Vincent and the Grenadines",
+      "official": "Saint Vincent and the Grenadines"
+    },
+    "cca3": "VCT",
+    "capital": [
+      "Kingstown"
+    ],
+    "region": "Americas",
+    "population": 110947,
+    "area": 389,
+    "translations": {
+      "spa": {
+        "official": "Saint Vincent and the Grenadines",
+        "common": "San Vicente y las Granadinas"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/vc.png",
+      "svg": "https://flagcdn.com/vc.svg",
+      "alt": "The flag of Saint Vincent and the Grenadines"
+    }
+  },
+  {
+    "name": {
+      "common": "Saint Lucia",
+      "official": "Saint Lucia"
+    },
+    "cca3": "LCA",
+    "capital": [
+      "Castries"
+    ],
+    "region": "Americas",
+    "population": 183629,
+    "area": 616,
+    "translations": {
+      "spa": {
+        "official": "Saint Lucia",
+        "common": "Santa Lucía"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/lc.png",
+      "svg": "https://flagcdn.com/lc.svg",
+      "alt": "The flag of Saint Lucia"
+    }
+  },
+  {
+    "name": {
+      "common": "Suriname",
+      "official": "Republic of Suriname"
+    },
+    "cca3": "SUR",
+    "capital": [
+      "Paramaribo"
+    ],
+    "region": "Americas",
+    "population": 586634,
+    "area": 163820,
+    "translations": {
+      "spa": {
+        "official": "Republic of Suriname",
+        "common": "Surinam"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/sr.png",
+      "svg": "https://flagcdn.com/sr.svg",
+      "alt": "The flag of Suriname"
+    }
+  },
+  {
+    "name": {
+      "common": "Trinidad and Tobago",
+      "official": "Republic of Trinidad and Tobago"
+    },
+    "cca3": "TTO",
+    "capital": [
+      "Port of Spain"
+    ],
+    "region": "Americas",
+    "population": 1399491,
+    "area": 5130,
+    "translations": {
+      "spa": {
+        "official": "Republic of Trinidad and Tobago",
+        "common": "Trinidad y Tobago"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/tt.png",
+      "svg": "https://flagcdn.com/tt.svg",
+      "alt": "The flag of Trinidad and Tobago"
+    }
+  },
+  {
+    "name": {
+      "common": "Uruguay",
+      "official": "Oriental Republic of Uruguay"
+    },
+    "cca3": "URY",
+    "capital": [
+      "Montevideo"
+    ],
+    "region": "Americas",
+    "population": 3473727,
+    "area": 181034,
+    "translations": {
+      "spa": {
+        "official": "Oriental Republic of Uruguay",
+        "common": "Uruguay"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/uy.png",
+      "svg": "https://flagcdn.com/uy.svg",
+      "alt": "The flag of Uruguay"
+    }
+  },
+  {
+    "name": {
+      "common": "Venezuela",
+      "official": "Bolivarian Republic of Venezuela"
+    },
+    "cca3": "VEN",
+    "capital": [
+      "Caracas"
+    ],
+    "region": "Americas",
+    "population": 28435943,
+    "area": 916445,
+    "translations": {
+      "spa": {
+        "official": "Bolivarian Republic of Venezuela",
+        "common": "Venezuela"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ve.png",
+      "svg": "https://flagcdn.com/ve.svg",
+      "alt": "The flag of Venezuela"
+    }
+  }
+]

@@ -1,5 +1,7 @@
 import type { Country } from "../types/types";
 
+const LOADING_DELAY_MS = 500;
+
 class Api {
   private baseUrl: string;
   private headers: HeadersInit;
@@ -18,25 +20,30 @@ class Api {
     throw new Error(`Error: ${res.status}`);
   }
 
+  private delay(ms: number): Promise<void> {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
   async getCountryById(id: string): Promise<Country> {
-    const res = await fetch(`${this.baseUrl}/alpha/${id}`, {
-      headers: this.headers,
-    });
-    const data = await this.handleResponse<Country[]>(res);
-    return data[0];
+    const countries = await this.getAllCountries();
+    const country = countries.find(
+      (c) => c.cca3.toLowerCase() === id.toLowerCase(),
+    );
+    if (!country) {
+      throw new Error(`Error: país no encontrado (${id})`);
+    }
+    return country;
   }
 
   async getAllCountries(): Promise<Country[]> {
-    const res = await fetch(
-      `${this.baseUrl}/region/americas?fields=name,flags,cca3,translations,capital,population`,
-      {
-        headers: this.headers,
-      },
-    );
+    await this.delay(LOADING_DELAY_MS);
+    const res = await fetch(`${this.baseUrl}countries.json`, {
+      headers: this.headers,
+    });
     return await this.handleResponse<Country[]>(res);
   }
 }
 
-const api = new Api("https://restcountries.com/v3.1");
+const api = new Api(import.meta.env.BASE_URL);
 
 export default api;
